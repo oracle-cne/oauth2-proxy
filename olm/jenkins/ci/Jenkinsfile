@@ -1,4 +1,4 @@
-@Library('olcne-pipeline') _
+@Library('olcne-pipeline@feature/mgianata-scan-rpms') _
 import com.oracle.olcne.pipeline.BranchPattern
 
 String version = '7.12.0'
