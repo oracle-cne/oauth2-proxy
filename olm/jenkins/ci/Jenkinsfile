@@ -1,3 +1,4 @@
+@Library('pipeline-shared@feature/mgianata-scan-rpms')
 @Library('olcne-pipeline@feature/mgianata-scan-rpms') _
 import com.oracle.olcne.pipeline.BranchPattern
 
