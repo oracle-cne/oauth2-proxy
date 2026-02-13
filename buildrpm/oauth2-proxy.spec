@@ -30,6 +30,7 @@ OAuth2-Proxy is a flexible, open-source tool that can act as either a standalone
 %setup -q -n %{name}-%{version}
 
 %build
+export VERSION=v%{app_version}
 make build
 
 %install
