@@ -22,12 +22,13 @@ Source:         %{name}-%{version}.tar.bz2
 BuildRequires:  golang
 BuildRequires:	make
 Patch0:		Makefile.patch
+
 %description
 OAuth2-Proxy is a flexible, open-source tool that can act as either a standalone reverse proxy or a middleware component integrated into existing reverse proxy or load balancer setups.
 
 %prep
-%patch0
 %setup -q -n %{name}-%{version}
+%patch0
 
 %build
 export VERSION=v7.14.3

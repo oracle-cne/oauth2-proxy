@@ -1,5 +1,5 @@
 diff --git Makefile Makefile
-index 73507560..b09cddc0 100644
+index 73507560..40b66108 100644
 --- Makefile
 +++ Makefile
 @@ -53,7 +53,7 @@ endif
@@ -7,7 +7,7 @@ index 73507560..b09cddc0 100644
  
  $(BINARY):
 -	CGO_ENABLED=0 $(GO) build -a -installsuffix cgo -ldflags="-X github.com/oauth2-proxy/oauth2-proxy/v7/pkg/version.VERSION=${VERSION}" -o $@ github.com/oauth2-proxy/oauth2-proxy/v7
-+	CGO_ENABLED=0 $(GO) build -a -installsuffix cgo -trimpath=false -ldflags="-X github.com/oauth2-proxy/oauth2-proxy/v7/pkg/version.VERSION=${VERSION}  -X main.version=${VERSION}" -o $@ github.com/oauth2-proxy/oauth2-proxy/v7
++	CGO_ENABLED=0 $(GO) build -a -installsuffix cgo -trimpath=false -ldflags="-X github.com/oauth2-proxy/oauth2-proxy/v7/pkg/version.VERSION=${VERSION} -X main.version=${VERSION}" -o $@ github.com/oauth2-proxy/oauth2-proxy/v7
  
  DOCKER_BUILDX_COMMON_ARGS     ?= --build-arg BUILD_IMAGE=docker.io/library/golang:$(GO_MOD_VERSION_MINOR)-bookworm --build-arg VERSION=$(VERSION)
  
