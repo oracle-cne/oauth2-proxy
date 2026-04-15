@@ -1,0 +1,13 @@
+@Library('olcne-pipeline') _
+import com.oracle.olcne.pipeline.BranchPattern
+
+String version = '7.15.2'
+String imgTag  = "v" + version
+
+olcnePipeline(
+        branchPattern: new BranchPattern(master: 'oracle/release/.*', feature: '(?!^oracle/release/$)(^.*$)'),
+        containers: [('container-registry.oracle.com/olcne/oauth2-proxy:' + imgTag): 'olcne/oauth2-proxy:' + imgTag],
+        platforms: ['ol9'],
+        architectures: ['x86_64', 'aarch64'],
+)
+
